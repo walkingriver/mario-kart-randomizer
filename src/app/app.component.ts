@@ -1,17 +1,31 @@
 import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { NgFor } from '@angular/common';
+import { RouterLinkActive, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
+  standalone: true,
+  imports: [IonicModule, NgFor, RouterLinkActive, RouterLink],
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    {
+      title: 'Home',
+      url: '/home',
+      icon: 'home',
+    },
+    {
+      title: 'Randomizer',
+      url: '/slots',
+      icon: 'shuffle',
+    },
+    {
+      title: 'Settings',
+      url: '/settings',
+      icon: 'settings',
+    },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
