@@ -1,8 +1,9 @@
 {
   "name": "mario-kart-randomizer",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "displayName": "MK8R-Deluxe",
+  "version": "24.18.1",
+  "author": "Michael D. Callaghan",
+  "homepage": "https://walkingriver.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
