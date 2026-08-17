@@ -1,10 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 80px;
+  margin: 0 auto;
+}
+
 .mk-slot-container {
-  height: 110px;
+  width: 100%;
+  height: clamp(72px, 24vw, 110px);
   background-color: white;
   border-style: inset;
   border-color: antiquewhite;
   border-width: 1px;
-  width: 80px;
   position: relative;
   perspective: 2000px;
   overflow: hidden;
@@ -27,36 +34,36 @@
   margin: 0;
   display: block;
   position: absolute;
-  width: 58px;
-  height: 80px;
-  left: 10px;
+  width: calc(100% - 22px);
+  height: calc(100% - 30px);
+  left: 11px;
   top: 10px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-/* WebKit and Opera browsers */
+.mk-slot-item img {
+  height: clamp(22px, 8vw, 38px);
+  max-width: 100%;
+}
+
 @-webkit-keyframes spinner {
   from {
-      -webkit-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
   }
 
   to {
-      -webkit-animation: rotateX(-360deg);
+    -webkit-animation: rotateX(-360deg);
   }
 }
 
 @keyframes spinner {
   from {
-      -moz-transform: rotateX(0deg);
-      -ms-transform: rotateX(0deg);
-      transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
 
   to {
-      -moz-transform: rotateX(-360deg);
-      -ms-transform: rotateX(-360deg);
-      transform: rotateX(-360deg);
+    transform: rotateX(-360deg);
   }
 }
 
@@ -71,15 +78,12 @@
   animation-iteration-count: infinite;
   animation-duration: 2s;
   animation-play-state: running;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 .mk-label {
-  white-space: wrap;
-  font-size: 11px;
-  line-height: 11px;
-  -moz-only-whitespace: wrap;
+  display: block;
+  white-space: normal;
+  font-size: clamp(7px, 2.2vw, 11px);
+  line-height: 1.1;
 }

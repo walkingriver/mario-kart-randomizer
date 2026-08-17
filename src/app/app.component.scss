@@ -52,7 +52,7 @@
 
 .app-main {
   flex: 1;
-  padding: 1rem;
+  padding: clamp(0.25rem, 1.5vw, 1rem);
 }
 
 @media (max-width: 480px) {

@@ -33,19 +33,14 @@ export class ContainerComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log('Initializing Slot3d');
-
     this.wheel.spinner = this.spinner.nativeElement;
     this.wheel.tiles = this.wheel.spinner.children;
 
-    // const panelSize = this.wheel.tiles[0].clientHeight;
-    const panelSize = 95;
+    const panelSize = this.wheel.spinner.clientHeight || 95;
     const itemCount = this.wheel.tiles.length;
     const itemAngle = 360 / itemCount;
     const tz = Math.round((panelSize / 2) / Math.tan(Math.PI / itemCount));
     const translateZ = 'translateZ(' + tz + 'px)';
-
-    console.log(`Item list contains ${itemCount} items, meaning each will require ${itemAngle} deg and ${tz} px each.`);
 
     for (let i = 0; i < itemCount; i++) {
       // Set 3D rotation
