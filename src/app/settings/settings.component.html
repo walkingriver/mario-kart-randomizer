@@ -1,0 +1,49 @@
+<section class="settings-page">
+  <h2>Settings</h2>
+
+  <article class="settings-card">
+    <h3>Characters</h3>
+    @if (!isValidCharacters) {
+      <p class="warning">You need to select at least one character type other than Mii.</p>
+    }
+    @for (size of CharacterSize | enum; track size) {
+      <label class="setting-row">
+        <span>Include {{ CharacterSize[size] }}</span>
+        <input
+          type="checkbox"
+          [checked]="isCharacterEnabled(size)"
+          (change)="enableCharacter(size, $any($event.target).checked)"
+        />
+      </label>
+    }
+  </article>
+
+  <article class="settings-card">
+    <h3>Vehicles</h3>
+    @if (!isValidVehicles) {
+      <p class="warning">You need to select at least one vehicle type.</p>
+    }
+    @for (type of VehicleType | enum; track type) {
+      <label class="setting-row">
+        <span>Include {{ VehicleType[type] }}</span>
+        <input
+          type="checkbox"
+          [checked]="isVehicleEnabled(type)"
+          (change)="enableVehicle(type, $any($event.target).checked)"
+        />
+      </label>
+    }
+  </article>
+
+  <article class="settings-card">
+    <h3>Options</h3>
+    <label class="setting-row">
+      <span>Allow Duplicates</span>
+      <input
+        type="checkbox"
+        [checked]="isDuplicatesEnabled()"
+        (change)="enableDuplicates($any($event.target).checked)"
+      />
+    </label>
+  </article>
+</section>

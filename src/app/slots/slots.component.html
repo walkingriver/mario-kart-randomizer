@@ -1,0 +1,51 @@
+<section class="slots-page">
+  <header class="slots-header">
+    <h2>Randomizer</h2>
+    <button type="button" class="shuffle-all" (click)="shuffleItems()" aria-label="Shuffle all players">
+      Shuffle All
+    </button>
+  </header>
+
+  <div class="players-grid">
+    @for (player of players; track player.name; let i = $index) {
+      <div class="player-column">
+        <div class="spinner-row">
+          <mk-container
+            #character
+            [items]="characters"
+            (click)="shuffleCharacter(character)"
+          ></mk-container>
+        </div>
+        <div class="spinner-row">
+          <mk-container
+            #vehicle
+            [items]="vehicles"
+            (click)="shuffleVehicle(vehicle)"
+          ></mk-container>
+        </div>
+        <div class="spinner-row">
+          <mk-container
+            #wheel
+            [items]="wheels"
+            (click)="shuffleWheel(wheel)"
+          ></mk-container>
+        </div>
+        <div class="spinner-row">
+          <mk-container
+            #glider
+            [items]="gliders"
+            (click)="shuffleGlider(glider)"
+          ></mk-container>
+        </div>
+        <button
+          type="button"
+          class="player-button"
+          [class]="'player-button player-' + player.color"
+          (click)="shuffleItems(i)"
+        >
+          {{ player.name }}
+        </button>
+      </div>
+    }
+  </div>
+</section>

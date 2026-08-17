@@ -1,0 +1,87 @@
+.slots-page {
+  max-width: 100%;
+}
+
+.slots-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.shuffle-all {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #75d0f7;
+  color: #1a1a2e;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background: #5bc0eb;
+  }
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.player-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner-row {
+  display: flex;
+  justify-content: center;
+}
+
+.player-button {
+  width: 100%;
+  max-width: 6rem;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.player-warning {
+  background: #ffc409;
+  color: #1a1a2e;
+}
+
+.player-primary {
+  background: #3880ff;
+}
+
+.player-danger {
+  background: #eb445a;
+}
+
+.player-success {
+  background: #2dd36f;
+  color: #1a1a2e;
+}
+
+@media (max-width: 900px) {
+  .players-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .players-grid {
+    grid-template-columns: 1fr;
+  }
+}

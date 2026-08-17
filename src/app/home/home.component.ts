@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { IonButton, IonButtons, IonMenuButton, IonHeader, IonTitle, IonToolbar, IonContent } from "@ionic/angular/standalone";
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [IonContent, IonToolbar, IonMenuButton, IonTitle, IonHeader, IonButton, IonButtons ],
+  imports: [RouterLink],
 })
-export class HomeComponent  {
-
-}
+export class HomeComponent {}

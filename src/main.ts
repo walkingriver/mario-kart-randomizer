@@ -1,17 +1,16 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-
-import { RouteReuseStrategy } from '@angular/router';
-import { IonicRouteStrategy, IonicModule } from '@ionic/angular';
-import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { AppRoutingModule } from './app/app-routing.module';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { isDevMode } from '@angular/core';
+import { provideServiceWorker } from '@angular/service-worker';
 import { AppComponent } from './app/app.component';
-import { importProvidersFrom } from '@angular/core';
+import { routes } from './app/app-routes';
 
 bootstrapApplication(AppComponent, {
-    providers: [
-        importProvidersFrom(BrowserModule, IonicModule.forRoot(), AppRoutingModule),
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-    ]
-})
-  .catch(err => console.log(err));
+  providers: [
+    provideRouter(routes),
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
+  ],
+}).catch((err) => console.error(err));
