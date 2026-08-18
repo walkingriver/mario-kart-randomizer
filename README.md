@@ -27,6 +27,10 @@ Push to `main`. The workflow in `.github/workflows/deploy.yml` builds and publis
 
 Live site: https://walkingriver.github.io/mario-kart-randomizer/
 
+### Offline / PWA
+
+On the first visit (while online), the service worker prefetches the app shell, lazy routes, and all game images/sounds. After that install completes, the randomizer works offline. The web manifest only controls install metadata; caching is handled by `ngsw-config.json`, not the manifest.
+
 ### Cloudflare Pages
 
 - **Build command:** `npm ci && npm run build -- --configuration production`

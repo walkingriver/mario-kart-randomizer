@@ -141,7 +141,24 @@
   position: relative;
   z-index: 1;
   will-change: transform;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+:host-context(.perf-lite) .mk-reel {
+  will-change: auto;
+}
+
+:host-context(.perf-lite) .mk-slot-glass {
+  opacity: 0.35;
+}
+
+:host-context(.perf-lite) .mk-reel-item img {
+  filter: none;
+}
+
+:host-context(.prefers-reduced-motion) .mk-slot-window.is-spinning .mk-slot-payline {
+  box-shadow: none;
 }
 
 .mk-reel-item {

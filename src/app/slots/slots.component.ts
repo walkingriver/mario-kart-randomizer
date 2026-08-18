@@ -15,6 +15,7 @@ import { VehicleType } from '../vehicle-type.enum';
 import { Character } from '../character';
 import { Vehicle } from '../vehicle';
 import { ContainerComponent } from '../container/container.component';
+import { getSlotPerformanceProfile } from '../browser-capabilities';
 
 @Component({
   selector: 'app-slots',
@@ -51,6 +52,7 @@ export class SlotsComponent implements OnInit, OnDestroy {
 
   private settings!: KartSettings;
   private navigationSub?: Subscription;
+  private readonly perf = getSlotPerformanceProfile();
 
   constructor(
     private mario: MarioService,
@@ -111,7 +113,6 @@ export class SlotsComponent implements OnInit, OnDestroy {
     const wheels = this.randomizeWheels(shuffleCount);
     const gliders = this.randomizeGliders(shuffleCount);
 
-    let promises: Promise<number>[];
     if (shuffleCount === 1 && player !== undefined) {
       const charSpinner = this.characterSpinners.find((_, i) => i === player);
       const vehicleSpinner = this.vehicleSpinners.find((_, i) => i === player);
@@ -120,26 +121,43 @@ export class SlotsComponent implements OnInit, OnDestroy {
       if (!charSpinner || !vehicleSpinner || !wheelSpinner || !gliderSpinner) {
         return;
       }
-      promises = [
-        charSpinner.spin(characters[0].name),
-        vehicleSpinner.spin(vehicles[0].name),
-        wheelSpinner.spin(wheels[0].name),
-        gliderSpinner.spin(gliders[0].name),
+      const row = [
+        () => charSpinner.spin(characters[0].name),
+        () => vehicleSpinner.spin(vehicles[0].name),
+        () => wheelSpinner.spin(wheels[0].name),
+        () => gliderSpinner.spin(gliders[0].name),
       ];
-    } else {
-      promises = flatten(
-        this.characterSpinners.map((spinner, i) =>
-          spinner.spin(characters[i].name)
-        ),
-        this.vehicleSpinners.map((spinner, i) =>
-          spinner.spin(vehicles[i].name)
-        ),
-        this.wheelSpinners.map((spinner, i) => spinner.spin(wheels[i].name)),
-        this.gliderSpinners.map((spinner, i) => spinner.spin(gliders[i].name))
-      );
+      await this.runSpins(row);
+      return;
     }
 
-    await Promise.all(promises);
+    const row = flatten(
+      this.characterSpinners.map((spinner, i) => () =>
+        spinner.spin(characters[i].name)
+      ),
+      this.vehicleSpinners.map((spinner, i) => () =>
+        spinner.spin(vehicles[i].name)
+      ),
+      this.wheelSpinners.map((spinner, i) => () => spinner.spin(wheels[i].name)),
+      this.gliderSpinners.map((spinner, i) => () => spinner.spin(gliders[i].name))
+    );
+    await this.runSpins(row);
+  }
+
+  private async runSpins(
+    spins: Array<() => Promise<number>>
+  ): Promise<void> {
+    if (this.perf.staggerMs <= 0) {
+      await Promise.all(spins.map((spin) => spin()));
+      return;
+    }
+
+    for (let i = 0; i < spins.length; i++) {
+      await spins[i]();
+      if (i < spins.length - 1) {
+        await delay(this.perf.staggerMs);
+      }
+    }
   }
 
   async shuffleCharacter(spinner: ContainerComponent): Promise<void> {
@@ -214,4 +232,8 @@ function randomList<T>(arr: T[], count: number): T[] {
     result.push(arr[r]);
   }
   return result;
+}
+
+function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

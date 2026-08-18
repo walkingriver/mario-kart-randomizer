@@ -3,9 +3,11 @@
   "short_name": "MK8R",
   "theme_color": "#75D0F7",
   "background_color": "#fafafa",
+  "description": "Randomize Mario Kart characters, karts, tires, and gliders for game night.",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "assets/icons/manifest-icon-192.png",

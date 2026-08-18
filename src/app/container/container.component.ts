@@ -10,13 +10,11 @@ import {
   afterNextRender,
   signal,
 } from '@angular/core';
+import { getSlotPerformanceProfile } from '../browser-capabilities';
 import { MkItem } from '../mk-item';
 
-/** Copies of the item list in the reel strip. Must exceed CENTER_COPY + max fullSpins + 1. */
-const REEL_COPIES = 10;
-const CENTER_COPY = 4;
+const PERF = getSlotPerformanceProfile();
 const MIN_FULL_SPINS = 2;
-const MAX_FULL_SPINS = 4;
 
 @Component({
   selector: 'mk-container',
@@ -30,16 +28,24 @@ export class ContainerComponent implements OnInit, OnChanges {
   @ViewChild('container', { static: true })
   private container!: ElementRef<HTMLElement>;
 
+  @ViewChild('reel', { static: true })
+  private reel!: ElementRef<HTMLElement>;
+
   public reelItems: MkItem[] = [];
-  public reelTransform = signal('translate3d(0, 0, 0)');
   public spinning = signal(false);
-  public itemHeight = signal(0);
 
   private static spinAudio = new Audio('assets/sounds/item-box.mp3');
 
+  private readonly reelCopies = PERF.reelCopies;
+  private readonly centerCopy = PERF.centerCopy;
+  private readonly maxFullSpins = PERF.maxFullSpins;
+  private readonly defaultSpinDuration = PERF.spinDurationMs;
+
+  private itemHeight = 0;
   private absoluteIndex = 0;
   private animating = false;
   private animationFrame = 0;
+
   constructor(private cdr: ChangeDetectorRef) {
     afterNextRender(() => this.scheduleLayoutSync());
   }
@@ -70,14 +76,13 @@ export class ContainerComponent implements OnInit, OnChanges {
     return `assets/images/${item.image}`;
   }
 
-  spin(name: string, duration = 4400): Promise<number> {
+  spin(name: string, duration = this.defaultSpinDuration): Promise<number> {
     if (!this.items.length || this.animating) {
       return Promise.resolve(this.currentItemIndex());
     }
 
     return this.ensureLayout().then(() => {
-      const itemHeight = this.itemHeight();
-      if (itemHeight <= 0) {
+      if (this.itemHeight <= 0) {
         return this.currentItemIndex();
       }
 
@@ -100,8 +105,8 @@ export class ContainerComponent implements OnInit, OnChanges {
         endAbsolute = maxAbsolute;
       }
 
-      const startY = this.indexToTranslate(this.absoluteIndex, itemHeight);
-      const endY = this.indexToTranslate(endAbsolute, itemHeight);
+      const startY = this.indexToTranslate(this.absoluteIndex);
+      const endY = this.indexToTranslate(endAbsolute);
       const spinDuration = duration + Math.floor(Math.random() * 800) - 400;
 
       this.spinning.set(true);
@@ -110,7 +115,7 @@ export class ContainerComponent implements OnInit, OnChanges {
 
       return this.animateTo(startY, endY, spinDuration).then(() => {
         this.absoluteIndex = endAbsolute;
-        this.normalizePosition(targetIndex, itemHeight);
+        this.normalizePosition(targetIndex);
         this.spinning.set(false);
         return targetIndex;
       });
@@ -119,7 +124,7 @@ export class ContainerComponent implements OnInit, OnChanges {
 
   private rebuildReel(): void {
     this.reelItems = [];
-    for (let copy = 0; copy < REEL_COPIES; copy++) {
+    for (let copy = 0; copy < this.reelCopies; copy++) {
       this.reelItems.push(...this.items);
     }
   }
@@ -134,7 +139,7 @@ export class ContainerComponent implements OnInit, OnChanges {
     const allowed = Math.floor(maxRunway / n) - 1;
     const desired =
       MIN_FULL_SPINS +
-      Math.floor(Math.random() * (MAX_FULL_SPINS - MIN_FULL_SPINS + 1));
+      Math.floor(Math.random() * (this.maxFullSpins - MIN_FULL_SPINS + 1));
     return Math.max(1, Math.min(desired, allowed));
   }
 
@@ -147,8 +152,8 @@ export class ContainerComponent implements OnInit, OnChanges {
     const measured =
       firstItem?.offsetHeight || windowEl?.clientHeight || root.clientHeight;
 
-    if (measured > 0 && measured !== this.itemHeight()) {
-      this.itemHeight.set(measured);
+    if (measured > 0 && measured !== this.itemHeight) {
+      this.itemHeight = measured;
       root.style.setProperty('--slot-item-height', `${measured}px`);
     }
   }
@@ -158,7 +163,7 @@ export class ContainerComponent implements OnInit, OnChanges {
       let attempts = 0;
       const tryMeasure = () => {
         this.syncItemHeight();
-        if (this.itemHeight() > 0 || attempts >= 10) {
+        if (this.itemHeight > 0 || attempts >= 10) {
           resolve();
           return;
         }
@@ -170,7 +175,7 @@ export class ContainerComponent implements OnInit, OnChanges {
   }
 
   private centeredIndex(itemIndex: number): number {
-    return CENTER_COPY * this.items.length + itemIndex;
+    return this.centerCopy * this.items.length + itemIndex;
   }
 
   private randomItemIndex(): number {
@@ -189,26 +194,27 @@ export class ContainerComponent implements OnInit, OnChanges {
     return ((value % divisor) + divisor) % divisor;
   }
 
-  private indexToTranslate(index: number, itemHeight: number): number {
-    return -index * itemHeight;
+  private indexToTranslate(index: number): number {
+    return -index * this.itemHeight;
+  }
+
+  private applyTransform(y: number): void {
+    this.reel.nativeElement.style.transform = `translate3d(0, ${y}px, 0)`;
   }
 
   private setAbsoluteIndex(index: number, _animate: boolean): void {
-    const itemHeight = this.itemHeight();
-    if (itemHeight <= 0) {
+    if (this.itemHeight <= 0) {
       return;
     }
 
     this.absoluteIndex = index;
-    const y = this.indexToTranslate(index, itemHeight);
-    this.reelTransform.set(`translate3d(0, ${y}px, 0)`);
+    this.applyTransform(this.indexToTranslate(index));
   }
 
-  private normalizePosition(targetIndex: number, itemHeight: number): void {
+  private normalizePosition(targetIndex: number): void {
     const normalizedIndex = this.centeredIndex(targetIndex);
     this.absoluteIndex = normalizedIndex;
-    const y = this.indexToTranslate(normalizedIndex, itemHeight);
-    this.reelTransform.set(`translate3d(0, ${y}px, 0)`);
+    this.applyTransform(this.indexToTranslate(normalizedIndex));
   }
 
   private animateTo(
@@ -228,14 +234,14 @@ export class ContainerComponent implements OnInit, OnChanges {
         const eased = easeOutQuart(t);
         const currentY = startY + (endY - startY) * eased;
 
-        this.reelTransform.set(`translate3d(0, ${currentY}px, 0)`);
+        this.applyTransform(currentY);
 
         if (t < 1) {
           this.animationFrame = requestAnimationFrame(step);
           return;
         }
 
-        this.reelTransform.set(`translate3d(0, ${endY}px, 0)`);
+        this.applyTransform(endY);
         this.animating = false;
         resolve();
       };
