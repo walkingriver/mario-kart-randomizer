@@ -2,7 +2,7 @@
   "name": "mk8r",
   "version": "25.0.0",
   "author": "Michael D. Callaghan",
-  "homepage": "https://walkingriver.github.io/mario-kart-randomizer-gp27pz/",
+  "homepage": "https://walkingriver.github.io/mario-kart-randomizer/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

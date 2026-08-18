@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BASE_PATH: /mario-kart-randomizer-gp27pz/
+  BASE_PATH: /mario-kart-randomizer/
 
 jobs:
   build:

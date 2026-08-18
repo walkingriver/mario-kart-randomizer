@@ -25,6 +25,8 @@ Output: `dist/mk8r/browser`
 
 Push to `main`. The workflow in `.github/workflows/deploy.yml` builds and publishes automatically. Enable GitHub Pages with source **GitHub Actions** in repo settings.
 
+Live site: https://walkingriver.github.io/mario-kart-randomizer/
+
 ### Cloudflare Pages
 
 - **Build command:** `npm ci && npm run build -- --configuration production`
