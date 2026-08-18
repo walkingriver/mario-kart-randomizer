@@ -55,22 +55,14 @@ function wikiFileName(localName) {
   return localName.replace(/^\d+px-/, '');
 }
 
-function thumbWidth(localName) {
-  const match = localName.match(/^(\d+)px-/);
-  return match ? Number(match[1]) : null;
-}
-
-async function wikiQuery(titles, thumbWidthPx) {
+async function wikiQuery(titles) {
   const params = new URLSearchParams({
     action: 'query',
     format: 'json',
     prop: 'imageinfo',
-    iiprop: 'url',
+    iiprop: 'url|size',
     titles: titles.map((t) => `File:${t}`).join('|'),
   });
-  if (thumbWidthPx) {
-    params.set('iiurlwidth', String(thumbWidthPx));
-  }
 
   const res = await fetch(`${API}?${params}`);
   if (!res.ok) {
@@ -104,18 +96,8 @@ async function download(url, dest) {
   await fs.writeFile(dest, buf);
 }
 
-function pickUrl(info, localName) {
-  const width = thumbWidth(localName);
-  if (width && info.thumburl && info.thumburl.includes(`${width}px-`)) {
-    return info.thumburl;
-  }
-  if (width && info.responsiveUrls) {
-    const scaled = info.responsiveUrls[String(width / 32)] ?? info.responsiveUrls['2'];
-    if (scaled) {
-      return scaled;
-    }
-  }
-  return info.thumburl ?? info.url;
+function pickUrl(info) {
+  return info.url;
 }
 
 async function main() {
@@ -140,10 +122,7 @@ async function main() {
   for (let i = 0; i < images.length; i += batchSize) {
     const batch = images.slice(i, i + batchSize);
     const wikiNames = batch.map(wikiFileName);
-    const widths = batch.map(thumbWidth);
-    const thumbW = widths.find((w) => w !== null) ?? 100;
-
-    const resolved = await wikiQuery(wikiNames, thumbW);
+    const resolved = await wikiQuery(wikiNames);
 
     for (const localName of batch) {
       const wikiName = wikiFileName(localName);
@@ -157,7 +136,7 @@ async function main() {
         continue;
       }
 
-      const url = pickUrl(info, localName);
+      const url = pickUrl(info);
       const dest = path.join(OUT_DIR, localName);
 
       try {
@@ -167,6 +146,8 @@ async function main() {
           wikiFile: wikiName,
           sourceUrl: info.descriptionurl,
           downloadUrl: url,
+          width: info.width,
+          height: info.height,
         });
         process.stdout.write(`OK  ${localName}\n`);
       } catch (err) {
