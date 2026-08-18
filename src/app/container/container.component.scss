@@ -146,7 +146,8 @@
 }
 
 :host-context(.perf-lite) .mk-reel {
-  will-change: auto;
+  will-change: transform;
+  contain: layout style paint;
 }
 
 :host-context(.perf-lite) .mk-slot-glass {

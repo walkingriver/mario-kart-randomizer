@@ -4,9 +4,9 @@ export interface SlotPerformanceProfile {
   reelCopies: number;
   centerCopy: number;
   maxFullSpins: number;
-  /** Delay between starting each reel spin (0 = all at once). */
-  staggerMs: number;
   spinDurationMs: number;
+  /** Animate via CSS transition instead of per-frame JS (better on WebKit). */
+  useCssTransition: boolean;
 }
 
 export function isSafari(): boolean {
@@ -33,9 +33,9 @@ export function getSlotPerformanceProfile(): SlotPerformanceProfile {
     lite,
     reelCopies: lite ? 7 : 10,
     centerCopy: lite ? 3 : 4,
-    maxFullSpins: lite ? 3 : 4,
-    staggerMs: lite ? 100 : 0,
-    spinDurationMs: lite ? 3600 : 4400,
+    maxFullSpins: lite ? 2 : 4,
+    spinDurationMs: lite ? 5800 : 4400,
+    useCssTransition: lite,
   };
 }
 

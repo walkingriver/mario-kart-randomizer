@@ -15,7 +15,6 @@ import { VehicleType } from '../vehicle-type.enum';
 import { Character } from '../character';
 import { Vehicle } from '../vehicle';
 import { ContainerComponent } from '../container/container.component';
-import { getSlotPerformanceProfile } from '../browser-capabilities';
 
 @Component({
   selector: 'app-slots',
@@ -52,7 +51,6 @@ export class SlotsComponent implements OnInit, OnDestroy {
 
   private settings!: KartSettings;
   private navigationSub?: Subscription;
-  private readonly perf = getSlotPerformanceProfile();
 
   constructor(
     private mario: MarioService,
@@ -147,17 +145,7 @@ export class SlotsComponent implements OnInit, OnDestroy {
   private async runSpins(
     spins: Array<() => Promise<number>>
   ): Promise<void> {
-    if (this.perf.staggerMs <= 0) {
-      await Promise.all(spins.map((spin) => spin()));
-      return;
-    }
-
-    for (let i = 0; i < spins.length; i++) {
-      await spins[i]();
-      if (i < spins.length - 1) {
-        await delay(this.perf.staggerMs);
-      }
-    }
+    await Promise.all(spins.map((spin) => spin()));
   }
 
   async shuffleCharacter(spinner: ContainerComponent): Promise<void> {
@@ -234,6 +222,3 @@ function randomList<T>(arr: T[], count: number): T[] {
   return result;
 }
 
-function delay(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}

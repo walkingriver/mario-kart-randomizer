@@ -40,6 +40,7 @@ export class ContainerComponent implements OnInit, OnChanges {
   private readonly centerCopy = PERF.centerCopy;
   private readonly maxFullSpins = PERF.maxFullSpins;
   private readonly defaultSpinDuration = PERF.spinDurationMs;
+  private readonly useCssTransition = PERF.useCssTransition;
 
   private itemHeight = 0;
   private absoluteIndex = 0;
@@ -113,7 +114,11 @@ export class ContainerComponent implements OnInit, OnChanges {
       ContainerComponent.spinAudio.currentTime = 0;
       void ContainerComponent.spinAudio.play();
 
-      return this.animateTo(startY, endY, spinDuration).then(() => {
+      const animate = this.useCssTransition
+        ? this.animateWithCssTransition(endY, spinDuration)
+        : this.animateTo(startY, endY, spinDuration);
+
+      return animate.then(() => {
         this.absoluteIndex = endAbsolute;
         this.normalizePosition(targetIndex);
         this.spinning.set(false);
@@ -215,6 +220,42 @@ export class ContainerComponent implements OnInit, OnChanges {
     const normalizedIndex = this.centeredIndex(targetIndex);
     this.absoluteIndex = normalizedIndex;
     this.applyTransform(this.indexToTranslate(normalizedIndex));
+  }
+
+  private animateWithCssTransition(
+    endY: number,
+    duration: number
+  ): Promise<void> {
+    this.animating = true;
+    cancelAnimationFrame(this.animationFrame);
+
+    const el = this.reel.nativeElement;
+    el.style.transition = 'none';
+
+    return new Promise((resolve) => {
+      let settled = false;
+      const finish = () => {
+        if (settled) {
+          return;
+        }
+        settled = true;
+        el.removeEventListener('transitionend', finish);
+        window.clearTimeout(fallback);
+        el.style.transition = '';
+        this.animating = false;
+        resolve();
+      };
+
+      el.addEventListener('transitionend', finish);
+      const fallback = window.setTimeout(finish, duration + 120);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.style.transition = `transform ${duration}ms cubic-bezier(0.165, 0.84, 0.44, 1)`;
+          this.applyTransform(endY);
+        });
+      });
+    });
   }
 
   private animateTo(
