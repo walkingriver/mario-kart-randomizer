@@ -1,8 +1,12 @@
-<div class="mk-slot-container">
-  <ul #spinner class="mk-spinner" [ngClass]="{'mk-spinning': running}" [ngStyle]="{transform: transform}">
-    <li *ngFor="let item of items" class="text-item-wrap text-center mk-slot-item">
-      <img [src]="getImage(item)" alt="">
-      <span class="mk-label">{{ item.name }}</span>
-    </li>
-  </ul>
+<div class="mk-slot-container" #container>
+  <div class="mk-slot-window" [class.mk-slot-window--spinning]="spinning()">
+    <ul #reel class="mk-reel" [style.transform]="reelTransform()">
+      @for (item of reelItems; track $index) {
+        <li class="mk-reel-item" [style.height.px]="itemHeight() || null">
+          <img [src]="getImage(item)" [alt]="item.name" loading="eager" decoding="async" />
+          <span class="mk-label">{{ item.name }}</span>
+        </li>
+      }
+    </ul>
+  </div>
 </div>
