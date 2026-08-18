@@ -9,7 +9,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --browsers=ChromeHeadless",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "download-assets": "node scripts/download-wiki-assets.mjs"
   },
   "private": true,
   "dependencies": {

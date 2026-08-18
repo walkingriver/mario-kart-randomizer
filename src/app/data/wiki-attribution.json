@@ -1,0 +1,676 @@
+{
+  "source": "Super Mario Wiki",
+  "sourceUrl": "https://www.mariowiki.com/",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "note": "Game names, characters, and artwork are property of Nintendo. Wiki images are used under Creative Commons Attribution-ShareAlike 4.0.",
+  "retrievedAt": "2026-08-18",
+  "assets": [
+    {
+      "file": "100px-300SLRoadster-MK8.png",
+      "wikiFile": "300SLRoadster MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:300SLRoadster_MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/f4/300SLRoadster_MK8.png/100px-300SLRoadster_MK8.png"
+    },
+    {
+      "file": "100px-AzureRollerTiresMK8.png",
+      "wikiFile": "AzureRollerTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:AzureRollerTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/fe/AzureRollerTiresMK8.png/100px-AzureRollerTiresMK8.png"
+    },
+    {
+      "file": "100px-BadwagonBodyMK8.png",
+      "wikiFile": "BadwagonBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:BadwagonBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/c2/BadwagonBodyMK8.png/100px-BadwagonBodyMK8.png"
+    },
+    {
+      "file": "100px-BiddybuggyBodyMK8.png",
+      "wikiFile": "BiddybuggyBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:BiddybuggyBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/45/BiddybuggyBodyMK8.png/100px-BiddybuggyBodyMK8.png"
+    },
+    {
+      "file": "100px-Blue_Standard.png",
+      "wikiFile": "Blue_Standard.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Blue_Standard.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/db/Blue_Standard.png/100px-Blue_Standard.png"
+    },
+    {
+      "file": "100px-ButtonTiresMK8.png",
+      "wikiFile": "ButtonTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:ButtonTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/07/ButtonTiresMK8.png/100px-ButtonTiresMK8.png"
+    },
+    {
+      "file": "100px-CatCruiserBodyMK8.png",
+      "wikiFile": "CatCruiserBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:CatCruiserBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/f4/CatCruiserBodyMK8.png/100px-CatCruiserBodyMK8.png"
+    },
+    {
+      "file": "100px-CircuitSpecialBodyMK8.png",
+      "wikiFile": "CircuitSpecialBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:CircuitSpecialBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/6/6c/CircuitSpecialBodyMK8.png/100px-CircuitSpecialBodyMK8.png"
+    },
+    {
+      "file": "100px-CometBodyMK8.png",
+      "wikiFile": "CometBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:CometBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/0e/CometBodyMK8.png/100px-CometBodyMK8.png"
+    },
+    {
+      "file": "100px-CrimsonSlimTiresMK8.png",
+      "wikiFile": "CrimsonSlimTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:CrimsonSlimTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/7/71/CrimsonSlimTiresMK8.png/100px-CrimsonSlimTiresMK8.png"
+    },
+    {
+      "file": "100px-CushionTiresMK8.png",
+      "wikiFile": "CushionTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:CushionTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/9/92/CushionTiresMK8.png/100px-CushionTiresMK8.png"
+    },
+    {
+      "file": "100px-CyberSlickTiresMK8.png",
+      "wikiFile": "CyberSlickTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:CyberSlickTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/2/29/CyberSlickTiresMK8.png/100px-CyberSlickTiresMK8.png"
+    },
+    {
+      "file": "100px-FlameRiderBodyMK8.png",
+      "wikiFile": "FlameRiderBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:FlameRiderBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/3/31/FlameRiderBodyMK8.png/100px-FlameRiderBodyMK8.png"
+    },
+    {
+      "file": "100px-GLA-MK8.png",
+      "wikiFile": "GLA-MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:GLA-MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/c2/GLA-MK8.png/100px-GLA-MK8.png"
+    },
+    {
+      "file": "100px-GLATires-MK8.png",
+      "wikiFile": "GLATires-MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:GLATires-MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/b/ba/GLATires-MK8.png/100px-GLATires-MK8.png"
+    },
+    {
+      "file": "100px-Gold_Standard.png",
+      "wikiFile": "Gold_Standard.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Gold_Standard.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/fe/Gold_Standard.png/100px-Gold_Standard.png"
+    },
+    {
+      "file": "100px-Gold_Tires_MK8.png",
+      "wikiFile": "Gold Tires MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Gold_Tires_MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/5/52/Gold_Tires_MK8.png/100px-Gold_Tires_MK8.png"
+    },
+    {
+      "file": "100px-HotMonsterTiresMK8.png",
+      "wikiFile": "HotMonsterTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:HotMonsterTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/d1/HotMonsterTiresMK8.png/100px-HotMonsterTiresMK8.png"
+    },
+    {
+      "file": "100px-JetBikeBodyMK8.png",
+      "wikiFile": "JetBikeBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:JetBikeBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/1/12/JetBikeBodyMK8.png/100px-JetBikeBodyMK8.png"
+    },
+    {
+      "file": "100px-LandshipBodyMK8.png",
+      "wikiFile": "LandshipBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:LandshipBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/6/6d/LandshipBodyMK8.png/100px-LandshipBodyMK8.png"
+    },
+    {
+      "file": "100px-Leaf_Tires_MK8.png",
+      "wikiFile": "Leaf Tires MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Leaf_Tires_MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/f9/Leaf_Tires_MK8.png/100px-Leaf_Tires_MK8.png"
+    },
+    {
+      "file": "100px-Mach8BodyMK8.png",
+      "wikiFile": "Mach8BodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Mach8BodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/df/Mach8BodyMK8.png/63px-Mach8BodyMK8.png"
+    },
+    {
+      "file": "100px-MetalTiresMK8.png",
+      "wikiFile": "MetalTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MetalTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/9/96/MetalTiresMK8.png/100px-MetalTiresMK8.png"
+    },
+    {
+      "file": "100px-MK7_Mushroom_Wheels.png",
+      "wikiFile": "MK7_Mushroom_Wheels.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK7_Mushroom_Wheels.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/fd/MK7_Mushroom_Wheels.png/100px-MK7_Mushroom_Wheels.png"
+    },
+    {
+      "file": "100px-MK7_Red_Monster.png",
+      "wikiFile": "MK7_Red_Monster.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK7_Red_Monster.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/5/5d/MK7_Red_Monster.png/100px-MK7_Red_Monster.png"
+    },
+    {
+      "file": "100px-MK8BlueFalcon.png",
+      "wikiFile": "MK8BlueFalcon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8BlueFalcon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/f6/MK8BlueFalcon.png/100px-MK8BlueFalcon.png"
+    },
+    {
+      "file": "100px-MK8BoneRattler.png",
+      "wikiFile": "MK8BoneRattler.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8BoneRattler.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/0a/MK8BoneRattler.png/100px-MK8BoneRattler.png"
+    },
+    {
+      "file": "100px-MK8CityTripper.png",
+      "wikiFile": "MK8 Blue City Tripper.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Blue_City_Tripper.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/6/63/MK8_Blue_City_Tripper.png/100px-MK8_Blue_City_Tripper.png"
+    },
+    {
+      "file": "100px-MK8D_Ancient_Tires.png",
+      "wikiFile": "MK8D_Ancient_Tires.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8D_Ancient_Tires.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/d5/MK8D_Ancient_Tires.png/100px-MK8D_Ancient_Tires.png"
+    },
+    {
+      "file": "100px-MK8MasterCycle.png",
+      "wikiFile": "MK8MasterCycle.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8MasterCycle.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/8/8a/MK8MasterCycle.png/100px-MK8MasterCycle.png"
+    },
+    {
+      "file": "100px-MK8PWing.png",
+      "wikiFile": "MK8PWing.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8PWing.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/cd/MK8PWing.png/100px-MK8PWing.png"
+    },
+    {
+      "file": "100px-MK8Streetle.png",
+      "wikiFile": "MK8Streetle.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8Streetle.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/cf/MK8Streetle.png/100px-MK8Streetle.png"
+    },
+    {
+      "file": "100px-MonsterTiresMK8.png",
+      "wikiFile": "MonsterTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MonsterTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/2/29/MonsterTiresMK8.png/100px-MonsterTiresMK8.png"
+    },
+    {
+      "file": "100px-MrScootyBodyMK8.png",
+      "wikiFile": "MrScootyBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MrScootyBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/1/18/MrScootyBodyMK8.png/100px-MrScootyBodyMK8.png"
+    },
+    {
+      "file": "100px-Off-Road.png",
+      "wikiFile": "Off-Road.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Off-Road.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/2/25/Off-Road.png/100px-Off-Road.png"
+    },
+    {
+      "file": "100px-PipeFrameBodyMK8.png",
+      "wikiFile": "PipeFrameBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:PipeFrameBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/d1/PipeFrameBodyMK8.png/63px-PipeFrameBodyMK8.png"
+    },
+    {
+      "file": "100px-PrancerBodyMK8.png",
+      "wikiFile": "PrancerBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:PrancerBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/ff/PrancerBodyMK8.png/100px-PrancerBodyMK8.png"
+    },
+    {
+      "file": "100px-Retro_Off-Road.png",
+      "wikiFile": "Retro_Off-Road.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Retro_Off-Road.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/48/Retro_Off-Road.png/100px-Retro_Off-Road.png"
+    },
+    {
+      "file": "100px-RollerTiresMK8.png",
+      "wikiFile": "RollerTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:RollerTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/7/76/RollerTiresMK8.png/100px-RollerTiresMK8.png"
+    },
+    {
+      "file": "100px-SlickTiresMK8.png",
+      "wikiFile": "SlickTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:SlickTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/dd/SlickTiresMK8.png/100px-SlickTiresMK8.png"
+    },
+    {
+      "file": "100px-SlimTiresMK8.png",
+      "wikiFile": "SlimTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:SlimTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/f8/SlimTiresMK8.png/100px-SlimTiresMK8.png"
+    },
+    {
+      "file": "100px-SneakerBodyMK8.png",
+      "wikiFile": "SneakerBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:SneakerBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/47/SneakerBodyMK8.png/100px-SneakerBodyMK8.png"
+    },
+    {
+      "file": "100px-SpongeTiresMK8.png",
+      "wikiFile": "SpongeTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:SpongeTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/4c/SpongeTiresMK8.png/100px-SpongeTiresMK8.png"
+    },
+    {
+      "file": "100px-SportBikeBodyMK8.png",
+      "wikiFile": "SportBikeBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:SportBikeBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/fe/SportBikeBodyMK8.png/100px-SportBikeBodyMK8.png"
+    },
+    {
+      "file": "100px-SportsCoupeMK8.png",
+      "wikiFile": "SportsCoupeMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:SportsCoupeMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/f8/SportsCoupeMK8.png/100px-SportsCoupeMK8.png"
+    },
+    {
+      "file": "100px-StandardATVBodyMK8.png",
+      "wikiFile": "StandardATVBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:StandardATVBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/2/23/StandardATVBodyMK8.png/100px-StandardATVBodyMK8.png"
+    },
+    {
+      "file": "100px-StandardBikeBodyMK8.png",
+      "wikiFile": "StandardBikeBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:StandardBikeBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/8/84/StandardBikeBodyMK8.png/100px-StandardBikeBodyMK8.png"
+    },
+    {
+      "file": "100px-StandardKartBodyMK8.png",
+      "wikiFile": "StandardKartBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:StandardKartBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/05/StandardKartBodyMK8.png/63px-StandardKartBodyMK8.png"
+    },
+    {
+      "file": "100px-StandardTiresMK8.png",
+      "wikiFile": "StandardTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:StandardTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/a8/StandardTiresMK8.png/100px-StandardTiresMK8.png"
+    },
+    {
+      "file": "100px-Steel_Driver.png",
+      "wikiFile": "Steel_Driver.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Steel_Driver.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/9/94/Steel_Driver.png/63px-Steel_Driver.png"
+    },
+    {
+      "file": "100px-Tanooki-Buggy.png",
+      "wikiFile": "MK8_Tanooki_Buggy_Sprite.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Tanooki_Buggy_Sprite.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/7/76/MK8_Tanooki_Buggy_Sprite.png/100px-MK8_Tanooki_Buggy_Sprite.png"
+    },
+    {
+      "file": "100px-TeddyBuggyBodyMK8.png",
+      "wikiFile": "TeddyBuggyBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:TeddyBuggyBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/fa/TeddyBuggyBodyMK8.png/100px-TeddyBuggyBodyMK8.png"
+    },
+    {
+      "file": "100px-TheDukeBodyMK8.png",
+      "wikiFile": "TheDukeBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:TheDukeBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/8/8a/TheDukeBodyMK8.png/100px-TheDukeBodyMK8.png"
+    },
+    {
+      "file": "100px-TrispeederBodyMK8.png",
+      "wikiFile": "TrispeederBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:TrispeederBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/5/56/TrispeederBodyMK8.png/100px-TrispeederBodyMK8.png"
+    },
+    {
+      "file": "100px-VarmintBodyMK8.png",
+      "wikiFile": "VarmintBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:VarmintBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/d0/VarmintBodyMK8.png/100px-VarmintBodyMK8.png"
+    },
+    {
+      "file": "100px-W25SilverArrow-MK8.png",
+      "wikiFile": "W25SilverArrow-MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:W25SilverArrow-MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/2/25/W25SilverArrow-MK8.png/100px-W25SilverArrow-MK8.png"
+    },
+    {
+      "file": "100px-WildWigglerBodyMK8.png",
+      "wikiFile": "WildWigglerBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:WildWigglerBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/aa/WildWigglerBodyMK8.png/100px-WildWigglerBodyMK8.png"
+    },
+    {
+      "file": "100px-WoodTiresMK8.png",
+      "wikiFile": "WoodTiresMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:WoodTiresMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/03/WoodTiresMK8.png/100px-WoodTiresMK8.png"
+    },
+    {
+      "file": "100px-YoshiBikeBodyMK8.png",
+      "wikiFile": "YoshiBikeBodyMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:YoshiBikeBodyMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/6/62/YoshiBikeBodyMK8.png/100px-YoshiBikeBodyMK8.png"
+    },
+    {
+      "file": "100px-ZeldaMK8Bdasher.png",
+      "wikiFile": "ZeldaMK8Bdasher.png",
+      "sourceUrl": "https://www.mariowiki.com/File:ZeldaMK8Bdasher.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/1/15/ZeldaMK8Bdasher.png/100px-ZeldaMK8Bdasher.png"
+    },
+    {
+      "file": "32px-Mii_MK8.png",
+      "wikiFile": "Mii_MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Mii_MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/b/bb/Mii_MK8.png/32px-Mii_MK8.png"
+    },
+    {
+      "file": "32px-MK8_BabyDaisy_Icon.png",
+      "wikiFile": "MK8_BabyDaisy_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_BabyDaisy_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/43/MK8_BabyDaisy_Icon.png/32px-MK8_BabyDaisy_Icon.png"
+    },
+    {
+      "file": "32px-MK8_BabyLuigi_Icon.png",
+      "wikiFile": "MK8_BabyLuigi_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_BabyLuigi_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/aa/MK8_BabyLuigi_Icon.png/32px-MK8_BabyLuigi_Icon.png"
+    },
+    {
+      "file": "32px-MK8_BabyMario_Icon.png",
+      "wikiFile": "MK8_BabyMario_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_BabyMario_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/d2/MK8_BabyMario_Icon.png/32px-MK8_BabyMario_Icon.png"
+    },
+    {
+      "file": "32px-MK8_BabyPeach_Icon.png",
+      "wikiFile": "MK8_BabyPeach_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_BabyPeach_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/3/3d/MK8_BabyPeach_Icon.png/32px-MK8_BabyPeach_Icon.png"
+    },
+    {
+      "file": "32px-MK8_BabyRosalina_Icon.png",
+      "wikiFile": "MK8_BabyRosalina_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_BabyRosalina_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/09/MK8_BabyRosalina_Icon.png/32px-MK8_BabyRosalina_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Bowser_Icon.png",
+      "wikiFile": "MK8_Bowser_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Bowser_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/47/MK8_Bowser_Icon.png/32px-MK8_Bowser_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Cat_Peach_Icon.png",
+      "wikiFile": "MK8_Cat_Peach_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Cat_Peach_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/ad/MK8_Cat_Peach_Icon.png/32px-MK8_Cat_Peach_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Daisy_Icon.png",
+      "wikiFile": "MK8_Daisy_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Daisy_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/3/32/MK8_Daisy_Icon.png/32px-MK8_Daisy_Icon.png"
+    },
+    {
+      "file": "32px-MK8_DKong_Icon.png",
+      "wikiFile": "MK8_DKong_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_DKong_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/08/MK8_DKong_Icon.png/32px-MK8_DKong_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Dry_Bowser_Icon.png",
+      "wikiFile": "MK8_Dry_Bowser_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Dry_Bowser_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/2/29/MK8_Dry_Bowser_Icon.png/32px-MK8_Dry_Bowser_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Iggy_Icon.png",
+      "wikiFile": "MK8_Iggy_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Iggy_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/dd/MK8_Iggy_Icon.png/32px-MK8_Iggy_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Isabelle_Icon.png",
+      "wikiFile": "MK8_Isabelle_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Isabelle_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/2/20/MK8_Isabelle_Icon.png/32px-MK8_Isabelle_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Koopa_Icon.png",
+      "wikiFile": "MK8_Koopa_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Koopa_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/b/bc/MK8_Koopa_Icon.png/32px-MK8_Koopa_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Lakitu_Icon.png",
+      "wikiFile": "MK8_Lakitu_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Lakitu_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/7/7d/MK8_Lakitu_Icon.png/32px-MK8_Lakitu_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Larry_Icon.png",
+      "wikiFile": "MK8_Larry_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Larry_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Larry_Icon.png/32px-MK8_Larry_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Lemmy_Icon.png",
+      "wikiFile": "MK8_Lemmy_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Lemmy_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/fc/MK8_Lemmy_Icon.png/32px-MK8_Lemmy_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Link_Icon.png",
+      "wikiFile": "MK8_Link_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Link_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/e/e8/MK8_Link_Icon.png/32px-MK8_Link_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Ludwig_Icon.png",
+      "wikiFile": "MK8_Ludwig_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Ludwig_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/a8/MK8_Ludwig_Icon.png/32px-MK8_Ludwig_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Luigi_Icon.png",
+      "wikiFile": "MK8_Luigi_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Luigi_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/5/51/MK8_Luigi_Icon.png/32px-MK8_Luigi_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Mario_Icon.png",
+      "wikiFile": "MK8_Mario_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Mario_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/d9/MK8_Mario_Icon.png/32px-MK8_Mario_Icon.png"
+    },
+    {
+      "file": "32px-MK8_MMario_Icon.png",
+      "wikiFile": "MK8_MMario_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_MMario_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/e/e3/MK8_MMario_Icon.png/32px-MK8_MMario_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Morton_Icon.png",
+      "wikiFile": "MK8_Morton_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Morton_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/7/72/MK8_Morton_Icon.png/32px-MK8_Morton_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Peach_Icon.png",
+      "wikiFile": "MK8_Peach_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Peach_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Peach_Icon.png/32px-MK8_Peach_Icon.png"
+    },
+    {
+      "file": "32px-MK8_PGPeach_Icon.png",
+      "wikiFile": "MK8_PGPeach_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_PGPeach_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/0d/MK8_PGPeach_Icon.png/32px-MK8_PGPeach_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Rosalina_Icon.png",
+      "wikiFile": "MK8_Rosalina_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Rosalina_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/8/89/MK8_Rosalina_Icon.png/32px-MK8_Rosalina_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Roy_Icon.png",
+      "wikiFile": "MK8_Roy_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Roy_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/3/3e/MK8_Roy_Icon.png/32px-MK8_Roy_Icon.png"
+    },
+    {
+      "file": "32px-MK8_ShyGuy_Icon.png",
+      "wikiFile": "MK8_ShyGuy_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_ShyGuy_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/7/7f/MK8_ShyGuy_Icon.png/32px-MK8_ShyGuy_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Tanooki_Mario_Icon.png",
+      "wikiFile": "MK8_Tanooki_Mario_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Tanooki_Mario_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/a2/MK8_Tanooki_Mario_Icon.png/32px-MK8_Tanooki_Mario_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Toad_Icon.png",
+      "wikiFile": "MK8_Toad_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Toad_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/45/MK8_Toad_Icon.png/32px-MK8_Toad_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Toadette_Icon.png",
+      "wikiFile": "MK8_Toadette_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Toadette_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/8/8e/MK8_Toadette_Icon.png/32px-MK8_Toadette_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Waluigi_Icon.png",
+      "wikiFile": "MK8_Waluigi_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Waluigi_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/7/78/MK8_Waluigi_Icon.png/32px-MK8_Waluigi_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Wario_Icon.png",
+      "wikiFile": "MK8_Wario_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Wario_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Wario_Icon.png/32px-MK8_Wario_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Wendy_Icon.png",
+      "wikiFile": "MK8_Wendy_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Wendy_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/d9/MK8_Wendy_Icon.png/32px-MK8_Wendy_Icon.png"
+    },
+    {
+      "file": "32px-MK8_Yoshi_Icon.png",
+      "wikiFile": "MK8_Yoshi_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Yoshi_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/9/91/MK8_Yoshi_Icon.png/32px-MK8_Yoshi_Icon.png"
+    },
+    {
+      "file": "50px-MK8_Villager_Icon.png",
+      "wikiFile": "MK8_Villager_Icon.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8_Villager_Icon.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/4/41/MK8_Villager_Icon.png/64px-MK8_Villager_Icon.png"
+    },
+    {
+      "file": "BowserKiteMK8.png",
+      "wikiFile": "BowserKiteMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:BowserKiteMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/f/f7/BowserKiteMK8.png/100px-BowserKiteMK8.png"
+    },
+    {
+      "file": "Cloud_Glider.png",
+      "wikiFile": "Cloud_Glider.png",
+      "sourceUrl": "https://www.mariowiki.com/File:Cloud_Glider.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/8/84/Cloud_Glider.png/100px-Cloud_Glider.png"
+    },
+    {
+      "file": "FlowerGliderMK8.png",
+      "wikiFile": "FlowerGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:FlowerGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/b/b3/FlowerGliderMK8.png/100px-FlowerGliderMK8.png"
+    },
+    {
+      "file": "GoldGliderMK8.png",
+      "wikiFile": "GoldGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:GoldGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/1/18/GoldGliderMK8.png/100px-GoldGliderMK8.png"
+    },
+    {
+      "file": "MK8-HylianKite.png",
+      "wikiFile": "MK8-HylianKite.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8-HylianKite.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/9/9c/MK8-HylianKite.png/100px-MK8-HylianKite.png"
+    },
+    {
+      "file": "MK8-TriforceTires.png",
+      "wikiFile": "MK8-TriforceTires.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MK8-TriforceTires.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/9/9d/MK8-TriforceTires.png/100px-MK8-TriforceTires.png"
+    },
+    {
+      "file": "MKTVParafoilGliderMK8.png",
+      "wikiFile": "MKTVParafoilGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:MKTVParafoilGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/9/96/MKTVParafoilGliderMK8.png/100px-MKTVParafoilGliderMK8.png"
+    },
+    {
+      "file": "PaperGliderIconMK8.png",
+      "wikiFile": "PaperGliderIcon-MK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:PaperGliderIcon-MK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/0/0e/PaperGliderIcon-MK8.png/100px-PaperGliderIcon-MK8.png"
+    },
+    {
+      "file": "ParachuteGliderMK8.png",
+      "wikiFile": "ParachuteGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:ParachuteGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/d/dd/ParachuteGliderMK8.png/100px-ParachuteGliderMK8.png"
+    },
+    {
+      "file": "ParafoilGliderMK8.png",
+      "wikiFile": "ParafoilGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:ParafoilGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/c4/ParafoilGliderMK8.png/100px-ParafoilGliderMK8.png"
+    },
+    {
+      "file": "PeachParasolGliderMK8.png",
+      "wikiFile": "PeachParasolGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:PeachParasolGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/6/6e/PeachParasolGliderMK8.png/100px-PeachParasolGliderMK8.png"
+    },
+    {
+      "file": "PlaneGliderMK8.png",
+      "wikiFile": "PlaneGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:PlaneGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/c/ca/PlaneGliderMK8.png/100px-PlaneGliderMK8.png"
+    },
+    {
+      "file": "SuperGliderMK8.png",
+      "wikiFile": "SuperGliderMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:SuperGliderMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/a8/SuperGliderMK8.png/100px-SuperGliderMK8.png"
+    },
+    {
+      "file": "WaddleWingMK8.png",
+      "wikiFile": "WaddleWingMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:WaddleWingMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/e/ef/WaddleWingMK8.png/100px-WaddleWingMK8.png"
+    },
+    {
+      "file": "WarioWingMK8.png",
+      "wikiFile": "WarioWingMK8.png",
+      "sourceUrl": "https://www.mariowiki.com/File:WarioWingMK8.png",
+      "downloadUrl": "https://mario.wiki.gallery/images/thumb/a/ae/WarioWingMK8.png/100px-WarioWingMK8.png"
+    }
+  ]
+}

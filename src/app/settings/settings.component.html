@@ -24,14 +24,16 @@
       <p class="warning">You need to select at least one vehicle type.</p>
     }
     @for (type of VehicleType | enum; track type) {
-      <label class="setting-row">
-        <span>Include {{ VehicleType[type] }}</span>
-        <input
-          type="checkbox"
-          [checked]="isVehicleEnabled(type)"
-          (change)="enableVehicle(type, $any($event.target).checked)"
-        />
-      </label>
+      @if (!(isMk7 && type === VehicleType.ATV)) {
+        <label class="setting-row">
+          <span>Include {{ VehicleType[type] }}</span>
+          <input
+            type="checkbox"
+            [checked]="isVehicleEnabled(type)"
+            (change)="enableVehicle(type, $any($event.target).checked)"
+          />
+        </label>
+      }
     }
   </article>
 

@@ -19,7 +19,7 @@ describe('AppComponent', () => {
   it('should have navigation items', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.navItems.length).toBe(3);
+    expect(app.navItems.length).toBe(4);
     expect(app.navItems[0].url).toBe('/home');
   });
 });

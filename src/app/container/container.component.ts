@@ -4,6 +4,7 @@ import {
   ElementRef,
   Input,
   OnChanges,
+  OnInit,
   SimpleChanges,
   ViewChild,
   afterNextRender,
@@ -23,7 +24,7 @@ const MAX_FULL_SPINS = 4;
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.scss'],
 })
-export class ContainerComponent implements OnChanges {
+export class ContainerComponent implements OnInit, OnChanges {
   @Input() public items: MkItem[] = [];
 
   @ViewChild('container', { static: true })
@@ -39,30 +40,30 @@ export class ContainerComponent implements OnChanges {
   private absoluteIndex = 0;
   private animating = false;
   private animationFrame = 0;
-  private layoutReady = false;
-
   constructor(private cdr: ChangeDetectorRef) {
-    afterNextRender(() => {
-      this.syncItemHeight();
-      if (this.items.length > 0) {
-        this.setAbsoluteIndex(this.centeredIndex(this.randomItemIndex()), false);
-      }
-      this.layoutReady = true;
-      this.cdr.markForCheck();
-    });
+    afterNextRender(() => this.scheduleLayoutSync());
+  }
+
+  ngOnInit(): void {
+    this.rebuildReel();
+    this.scheduleLayoutSync();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['items']) {
       this.rebuildReel();
-      if (this.layoutReady && this.items.length > 0) {
-        requestAnimationFrame(() => {
-          this.syncItemHeight();
-          this.setAbsoluteIndex(this.centeredIndex(this.randomItemIndex()), false);
-          this.cdr.markForCheck();
-        });
-      }
+      this.scheduleLayoutSync();
     }
+  }
+
+  private scheduleLayoutSync(): void {
+    requestAnimationFrame(() => {
+      this.syncItemHeight();
+      if (this.items.length > 0) {
+        this.setAbsoluteIndex(this.centeredIndex(this.randomItemIndex()), false);
+      }
+      this.cdr.markForCheck();
+    });
   }
 
   getImage(item: MkItem): string {

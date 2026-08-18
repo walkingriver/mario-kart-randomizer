@@ -23,4 +23,11 @@ export const routes: Routes = [
       import('./settings/settings.component').then((m) => m.SettingsComponent),
     canDeactivate: [canDeactivateGuard],
   },
+  {
+    path: 'attribution',
+    loadComponent: () =>
+      import('./attribution/attribution.component').then(
+        (m) => m.AttributionComponent
+      ),
+  },
 ];

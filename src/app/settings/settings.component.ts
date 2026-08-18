@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CharacterSize } from '../character-size.enum';
+import { GameVersion } from '../game-version.enum';
 import { VehicleType } from '../vehicle-type.enum';
 import { SettingsService } from '../settings.service';
 import { CanDeactivateComponent } from '../can-deactivate.guard';
@@ -53,8 +54,17 @@ export class SettingsComponent
   }
 
   get isValidVehicles(): boolean {
-    const required = VehicleType.Kart | VehicleType.Bike | VehicleType.ATV;
-    return this.isVehicleEnabled(required);
+    return !!(this.settings.allowedVehicles & this.requiredVehicleTypes);
+  }
+
+  get requiredVehicleTypes(): VehicleType {
+    return this.isMk7
+      ? VehicleType.Kart | VehicleType.Bike
+      : VehicleType.Kart | VehicleType.Bike | VehicleType.ATV;
+  }
+
+  get isMk7(): boolean {
+    return this.settings.gameVersion === GameVersion.MK7;
   }
 
   isVehicleEnabled(vehicle: VehicleType): boolean {

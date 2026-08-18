@@ -31,3 +31,25 @@
   color: #c0392b;
   font-size: 0.9rem;
 }
+
+.game-version-fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.game-version-option {
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

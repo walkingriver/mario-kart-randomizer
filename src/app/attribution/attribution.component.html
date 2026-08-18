@@ -1,0 +1,36 @@
+<section class="attribution-page">
+  <h2>Image Attribution</h2>
+
+  <p>
+    Item icons and artwork in this app come from
+    <a [href]="data.sourceUrl" rel="noopener noreferrer">{{ data.source }}</a
+    >, used under the
+    <a [href]="data.licenseUrl" rel="noopener noreferrer">{{ data.license }}</a>
+    license.
+  </p>
+
+  <p>
+    {{ data.note }}
+  </p>
+
+  <p>
+    Mario Kart, Nintendo, and related marks are trademarks of Nintendo. This app
+    is not affiliated with or endorsed by Nintendo.
+  </p>
+
+  <p class="meta">Asset list retrieved {{ data.retrievedAt }}.</p>
+
+  <details class="asset-list">
+    <summary>{{ assets.length }} image files</summary>
+    <ul>
+      @for (asset of assets; track asset.file) {
+        <li>
+          <span class="file">{{ asset.file }}</span>
+          <a [href]="asset.sourceUrl" rel="noopener noreferrer">{{
+            asset.wikiFile
+          }}</a>
+        </li>
+      }
+    </ul>
+  </details>
+</section>

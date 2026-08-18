@@ -1,20 +1,29 @@
-import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter, Subscription } from 'rxjs';
 import { MarioService } from '../mario.service';
 import { MkItem } from '../mk-item';
 import { KartSettings } from '../kart-settings';
+import {
+  GAME_VERSION_LABELS,
+  GAME_VERSION_OPTIONS,
+  GameVersion,
+} from '../game-version.enum';
 import { SettingsService } from '../settings.service';
+import { VehicleType } from '../vehicle-type.enum';
 import { Character } from '../character';
 import { Vehicle } from '../vehicle';
 import { ContainerComponent } from '../container/container.component';
 
 @Component({
   selector: 'app-slots',
-  imports: [ContainerComponent],
+  imports: [ContainerComponent, FormsModule],
   templateUrl: './slots.component.html',
   styleUrls: ['./slots.component.scss'],
   standalone: true,
 })
-export class SlotsComponent implements OnInit {
+export class SlotsComponent implements OnInit, OnDestroy {
   public characters: Character[];
   public vehicles: Vehicle[];
   public wheels: MkItem[];
@@ -27,6 +36,10 @@ export class SlotsComponent implements OnInit {
     { name: 'Player 4', color: 'success' },
   ];
 
+  public gameVersionOptions = GAME_VERSION_OPTIONS;
+  public gameVersionLabels = GAME_VERSION_LABELS;
+  public boardKey = 0;
+
   @ViewChildren('character')
   private characterSpinners!: QueryList<ContainerComponent>;
   @ViewChildren('vehicle')
@@ -37,19 +50,57 @@ export class SlotsComponent implements OnInit {
   private gliderSpinners!: QueryList<ContainerComponent>;
 
   private settings!: KartSettings;
+  private navigationSub?: Subscription;
 
   constructor(
-    mario: MarioService,
-    private settingsService: SettingsService
+    private mario: MarioService,
+    private settingsService: SettingsService,
+    private router: Router
   ) {
-    this.characters = mario.getAllCharacters();
-    this.vehicles = mario.getAllVehicles();
-    this.wheels = mario.getAllWheels();
-    this.gliders = mario.getAllGliders();
+    this.characters = [];
+    this.vehicles = [];
+    this.wheels = [];
+    this.gliders = [];
+    this.reloadCatalog();
   }
 
   ngOnInit(): void {
+    this.navigationSub = this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        filter((event) => event.urlAfterRedirects.includes('/slots'))
+      )
+      .subscribe(() => this.reloadCatalog());
+  }
+
+  ngOnDestroy(): void {
+    this.navigationSub?.unsubscribe();
+  }
+
+  private reloadCatalog(): void {
     this.settings = this.settingsService.loadSettings();
+    this.characters = this.mario.getAllCharacters();
+    this.vehicles = this.mario.getAllVehicles();
+    this.wheels = this.mario.getAllWheels();
+    this.gliders = this.mario.getAllGliders();
+  }
+
+  get selectedGameVersion(): GameVersion {
+    return this.settings.gameVersion;
+  }
+
+  onGameChange(version: GameVersion): void {
+    if (version === this.settings.gameVersion) {
+      return;
+    }
+
+    this.settings = { ...this.settings, gameVersion: version };
+    if (version === GameVersion.MK7) {
+      this.settings.allowedVehicles &= ~VehicleType.ATV;
+    }
+    this.settingsService.saveSettings(this.settings);
+    this.reloadCatalog();
+    this.boardKey++;
   }
 
   async shuffleItems(player?: number): Promise<void> {
@@ -134,6 +185,9 @@ export class SlotsComponent implements OnInit {
   }
 
   randomize(list: MkItem[], count: number): MkItem[] {
+    if (!list.length) {
+      return [];
+    }
     return this.settings.allowDuplicates
       ? randomList(list, count)
       : shuffle(list).slice(0, count);

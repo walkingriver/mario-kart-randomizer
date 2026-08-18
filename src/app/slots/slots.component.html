@@ -1,13 +1,28 @@
 <section class="slots-page">
   <header class="slots-header">
     <h2>Randomizer</h2>
-    <button type="button" class="shuffle-all" (click)="shuffleItems()" aria-label="Shuffle all players">
-      Shuffle All
-    </button>
+    <div class="slots-controls">
+      <label class="game-select">
+        <span class="game-select-label">Game</span>
+        <select
+          class="game-select-input"
+          [ngModel]="selectedGameVersion"
+          (ngModelChange)="onGameChange($event)"
+          aria-label="Mario Kart game version"
+        >
+          @for (version of gameVersionOptions; track version) {
+            <option [ngValue]="version">{{ gameVersionLabels[version] }}</option>
+          }
+        </select>
+      </label>
+      <button type="button" class="shuffle-all" (click)="shuffleItems()" aria-label="Shuffle all players">
+        Shuffle All
+      </button>
+    </div>
   </header>
 
   <div class="players-grid">
-    @for (player of players; track player.name; let i = $index) {
+    @for (player of players; track boardKey + '-' + player.name; let i = $index) {
       <div class="player-column">
         <div class="spinner-row">
           <mk-container

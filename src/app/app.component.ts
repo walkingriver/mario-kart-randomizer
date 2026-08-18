@@ -13,5 +13,6 @@ export class AppComponent {
     { title: 'Home', url: '/home' },
     { title: 'Randomizer', url: '/slots' },
     { title: 'Settings', url: '/settings' },
+    { title: 'Attribution', url: '/attribution' },
   ];
 }
