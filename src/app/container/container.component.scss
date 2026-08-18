@@ -1,60 +1,145 @@
 :host {
   display: block;
   width: 100%;
-  max-width: 80px;
+  max-width: 84px;
   margin: 0 auto;
 }
 
-.mk-slot-container {
+.mk-slot-machine {
   width: 100%;
-  height: var(--slot-item-height, clamp(72px, 24vw, 110px));
-  background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 45%, #ffffff 55%, #f0f0f0 100%);
-  border: 1px inset antiquewhite;
-  border-radius: 4px;
+  padding: 2px;
+  border-radius: 7px;
+  background: linear-gradient(160deg, #5a5a5a 0%, #2f2f2f 45%, #424242 100%);
   box-shadow:
-    inset 0 2px 4px rgba(0, 0, 0, 0.08),
-    0 1px 2px rgba(0, 0, 0, 0.06);
-  position: relative;
-  overflow: hidden;
+    0 2px 5px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.mk-slot-frame {
+  padding: 3px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #222 0%, #0a0a0a 100%);
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.9),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .mk-slot-window {
-  height: 100%;
-  overflow: hidden;
   position: relative;
-  -webkit-mask-image: linear-gradient(
+  height: var(--slot-item-height, clamp(72px, 24vw, 110px));
+  overflow: hidden;
+  border-radius: 3px;
+  background:
+    radial-gradient(ellipse at center, #1e2a33 0%, #0b1014 70%),
+    #0b1014;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.9),
+    inset 0 0 12px rgba(0, 0, 0, 0.85);
+}
+
+.mk-slot-shade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 34%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.mk-slot-shade--top {
+  top: 0;
+  background: linear-gradient(
     180deg,
-    transparent 0%,
-    #000 12%,
-    #000 88%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    180deg,
-    transparent 0%,
-    #000 12%,
-    #000 88%,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
     transparent 100%
   );
 }
 
-.mk-slot-window--spinning::before {
-  content: '';
+.mk-slot-shade--bottom {
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    transparent 100%
+  );
+}
+
+.mk-slot-glass {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  border-radius: 3px;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.04) 22%,
+    transparent 45%,
+    transparent 72%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.mk-slot-payline {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(50% - 1px);
-  height: 2px;
-  background: rgba(117, 208, 247, 0.85);
-  box-shadow: 0 0 6px rgba(117, 208, 247, 0.6);
-  z-index: 2;
+  top: 50%;
+  z-index: 3;
+  height: 0;
   pointer-events: none;
+  border-top: 1px solid rgba(117, 208, 247, 0.35);
+  border-bottom: 1px solid rgba(117, 208, 247, 0.35);
+  margin-top: -1px;
+  box-shadow: 0 0 3px rgba(117, 208, 247, 0.2);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mk-slot-window.is-spinning .mk-slot-payline {
+  border-top-color: rgba(117, 208, 247, 0.65);
+  border-bottom-color: rgba(117, 208, 247, 0.65);
+  box-shadow:
+    0 0 5px rgba(117, 208, 247, 0.45),
+    0 0 10px rgba(117, 208, 247, 0.2);
+}
+
+.mk-slot-frame::before,
+.mk-slot-frame::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  margin-top: -5px;
+  background: linear-gradient(180deg, #888, #444);
+  border-radius: 1px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.mk-slot-frame {
+  position: relative;
+}
+
+.mk-slot-frame::before {
+  left: 0;
+}
+
+.mk-slot-frame::after {
+  right: 0;
 }
 
 .mk-reel {
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 1;
   will-change: transform;
   transform: translateZ(0);
 }
@@ -77,6 +162,7 @@
   max-width: 100%;
   object-fit: contain;
   flex-shrink: 0;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
 }
 
 .mk-label {
@@ -86,4 +172,6 @@
   font-size: clamp(7px, 2.2vw, 11px);
   line-height: 1.1;
   overflow: hidden;
+  color: #f4f4f4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }

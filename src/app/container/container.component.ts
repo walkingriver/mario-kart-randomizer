@@ -138,18 +138,17 @@ export class ContainerComponent implements OnChanges {
   }
 
   private syncItemHeight(): void {
-    const container = this.container.nativeElement;
-    const firstItem = container.querySelector(
+    const root = this.container.nativeElement;
+    const firstItem = root.querySelector(
       '.mk-reel-item'
     ) as HTMLElement | null;
+    const windowEl = root.querySelector('.mk-slot-window') as HTMLElement | null;
     const measured =
-      firstItem?.offsetHeight ||
-      container.querySelector('.mk-slot-window')?.clientHeight ||
-      container.clientHeight;
+      firstItem?.offsetHeight || windowEl?.clientHeight || root.clientHeight;
 
     if (measured > 0 && measured !== this.itemHeight()) {
       this.itemHeight.set(measured);
-      container.style.setProperty('--slot-item-height', `${measured}px`);
+      root.style.setProperty('--slot-item-height', `${measured}px`);
     }
   }
 
